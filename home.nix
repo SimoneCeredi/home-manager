@@ -28,6 +28,7 @@
     source-code-pro
     ttf_bitstream_vera
     terminus_font_ttf
+    font-awesome
   ];
 
   home.file = {
@@ -41,6 +42,15 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+    "${config.home.homeDirectory}/.config/sway"= {
+      source = ./.config/sway;
+      recursive = true;
+    };
+
+    "${config.home.homeDirectory}/.config/waybar"= {
+      source = ./.config/waybar;
+      recursive = true;
+    };
   };
 
   home.sessionVariables = {

@@ -6,7 +6,7 @@
       main = {
         term = "xterm-256color";
 
-        font = "JetBrains Mono:size=22";
+        font = "JetBrains Mono:size=16";
         dpi-aware = "yes";
       };
     };

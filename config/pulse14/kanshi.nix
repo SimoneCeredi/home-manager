@@ -15,7 +15,7 @@
             status = "enable";
             mode = "2880x1800";
             position = "0,0";
-            scale = 1.25;
+            scale = 1.5;
           }
         ];
       };
@@ -26,10 +26,10 @@
             status = "enable";
             mode = "2880x1800";
             position = "0,0";
-            scale = 1.25;
+            scale = 1.5;
           }
           {
-            criteria = "HDMI1";
+            criteria = "LG Electronics LG HDR 4K 0x00007E97";
             mode = "3840x2160";
             position = "2880,0";
             scale = 1.0;
