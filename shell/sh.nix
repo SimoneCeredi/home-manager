@@ -31,6 +31,7 @@ in
       shellAliases = myAliases;
       initExtra = ''
         bindkey '^ ' autosuggest-accept
+        source ~/.nix-profile/etc/profile.d/nix.sh
       '';
       oh-my-zsh = {
         enable = true;

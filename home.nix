@@ -8,7 +8,7 @@
     ./app
     ./lang
     ./shell
-    ./wm/cursor.nix
+    ./wm
     # (./. + "./config/"+profile)
   ];
 
