@@ -29,9 +29,6 @@
     ttf_bitstream_vera
     terminus_font_ttf
     font-awesome
-
-    chromium
-    librewolf
   ];
 
   home.file = {
