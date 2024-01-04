@@ -31,31 +31,12 @@
     font-awesome
 
     chromium
+    librewolf
   ];
 
   home.file = {
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
-
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
-    "${config.home.homeDirectory}/.config/sway"= {
-      source = ./.config/sway;
-      recursive = true;
-    };
-
-    "${config.home.homeDirectory}/.config/waybar"= {
-      source = ./.config/waybar;
-      recursive = true;
-    };
-
-    "${config.home.homeDirectory}/.config/xkb" = {
-      source = ./.config/xkb;
+    "${config.home.homeDirectory}/.config" = {
+      source = ./.config;
       recursive = true;
     };
   };

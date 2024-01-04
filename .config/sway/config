@@ -172,9 +172,31 @@ input "type:touchpad" {
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 
+    bindsym $mod+plus workspace number 1
+    bindsym $mod+bracketleft workspace number 2
+    bindsym $mod+braceleft workspace number 3
+    bindsym $mod+parenleft workspace number 4
+    bindsym $mod+ampersand workspace number 5
+    bindsym $mod+equal workspace number 6
+    bindsym $mod+parenright workspace number 7
+    bindsym $mod+braceright workspace number 8
+    bindsym $mod+bracketright workspace number 9
+    bindsym $mod+asterisk workspace number 10
+    # Move focused container to workspace
+    bindsym $mod+Shift+plus move container to workspace number 1
+    bindsym $mod+Shift+bracketleft move container to workspace number 2
+    bindsym $mod+Shift+braceleft move container to workspace number 3
+    bindsym $mod+Shift+parenleft move container to workspace number 4
+    bindsym $mod+Shift+ampersand move container to workspace number 5
+    bindsym $mod+Shift+equal move container to workspace number 6
+    bindsym $mod+Shift+parenright move container to workspace number 7
+    bindsym $mod+Shift+braceright move container to workspace number 8
+    bindsym $mod+Shift+bracketright move container to workspace number 9
+    bindsym $mod+Shift+asterisk move container to workspace number 10
+
     # moving workspaces between monitors
-    bindsym $mod+Control+m move workspace to output right
-    bindsym $mod+Control+Shift+m move workspace to output left
+    bindsym $mod+m move workspace to output right
+    bindsym $mod+Shift+m move workspace to output left
 
 #
 # Layout stuff:
