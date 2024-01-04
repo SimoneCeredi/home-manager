@@ -32,6 +32,8 @@ in
       initExtra = ''
         bindkey '^ ' autosuggest-accept
         source ~/.nix-profile/etc/profile.d/nix.sh
+        ln -s /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications/ > /dev/null 2>&1
+        bindkey -s '^f' "tms\n"
       '';
       oh-my-zsh = {
         enable = true;

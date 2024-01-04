@@ -22,7 +22,15 @@ set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu fuzzel -b bbbbbbf0 -f JetBrainsMono:size=12 -i Arc -w 40 -l 25
+set $menu rofi -show drun
+
+set $swaylockcmd swaylock -i /home/simone/.wallpapers/wallpaper.png 
+
+exec swayidle -w \
+  timeout 120 $swaylockcmd \
+  timeout 130 'systemctl suspend' \
+  timeout 100 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+  before-sleep $swaylockcmd 
 
 ### Output configuration
 #
@@ -62,7 +70,13 @@ output * bg /home/simone/.wallpapers/wallpaper.png fill
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-input "type:keyboard" xkb_options caps:escape
+input "type:keyboard" {
+    xkb_layout bus
+    xkb_options caps:escape
+}
+input "5824:10203:Glove80_Keyboard" {
+    xkb_layout rpq
+}
 input "type:pointer" accel_profile flat
 input "type:touchpad" {
 	# enable tap to click
@@ -83,6 +97,8 @@ input "type:touchpad" {
 
     # Start your launcher
     bindsym $mod+d exec $menu
+
+    bindsym $mod+Escape exec $swaylockcmd
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.

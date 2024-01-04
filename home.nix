@@ -29,6 +29,8 @@
     ttf_bitstream_vera
     terminus_font_ttf
     font-awesome
+
+    chromium
   ];
 
   home.file = {
@@ -49,6 +51,11 @@
 
     "${config.home.homeDirectory}/.config/waybar"= {
       source = ./.config/waybar;
+      recursive = true;
+    };
+
+    "${config.home.homeDirectory}/.config/xkb" = {
+      source = ./.config/xkb;
       recursive = true;
     };
   };
