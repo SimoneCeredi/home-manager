@@ -22,7 +22,7 @@ set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu wofi --show run
+set $menu fuzzel -b bbbbbbf0 -f JetBrainsMono:size=12 -i Arc -w 40 -l 25
 
 ### Output configuration
 #

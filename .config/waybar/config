@@ -1,13 +1,13 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 15, // Waybar height (to be removed for auto height)
+    "height": 12, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
     "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "network", "backlight", "sway/language", "battery", "battery#bat2", "clock", "tray"],
-    // Modules configuration
+    "modules-right": ["cpu", "memory", "pulseaudio", "network", "backlight", "sway/language", "battery", "battery#bat2", "clock", "tray"],
+        // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
     //     "all-outputs": true,
@@ -64,9 +64,7 @@
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format": "{:%Y-%m-%d %H:%M}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -145,3 +143,4 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     }
 }
+
