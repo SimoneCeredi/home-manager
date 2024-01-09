@@ -5,7 +5,7 @@ ifndef HOSTNAME
 endif
 
 switch:
-	home-manager switch --flake .#${HOSTNAME}
+	home-manager switch --flake .#${HOSTNAME} --impure
 
 update:
 	nix flake update
