@@ -31,11 +31,14 @@
     font-awesome
 
     chromium
+
+    mongodb-compass
+    # onedrive
   ];
 
   home.file = {
     "${config.home.homeDirectory}/.config" = {
-      source = ./.config;
+      source = ./.dotfiles/.config;
       recursive = true;
     };
   };

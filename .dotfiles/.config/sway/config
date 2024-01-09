@@ -26,11 +26,6 @@ set $menu /usr/local/bin/rof
 
 set $swaylockcmd swaylock -i /home/simone/.wallpapers/wallpaper.png 
 
-exec swayidle -w \
-  timeout 120 $swaylockcmd \
-  timeout 130 'systemctl suspend' \
-  timeout 100 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-  before-sleep $swaylockcmd 
 
 ### Output configuration
 #
@@ -47,10 +42,10 @@ output * bg /home/simone/.wallpapers/wallpaper.png fill
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w \
+         timeout 300 'swaylock -i /home/simone/.wallpapers/wallpaper.png' \
+         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock -i /home/simone/.wallpapers/wallpaper.png'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when

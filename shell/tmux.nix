@@ -25,9 +25,9 @@
       bind b new-window -c "#{pane_current_path}"
 
       # forget the find window.  That is for chumps
-      bind-key -r f run-shell "tms"
+      bind-key -r f run-shell "tmux neww tms"
 
-      bind-key -r i run-shell "tmux neww tmux-cht.sh"
+      # bind-key -r i run-shell "tmux neww tmux-cht.sh"
     '';
   };
   home.packages = with pkgs; [
