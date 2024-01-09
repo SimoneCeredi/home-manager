@@ -41,6 +41,10 @@
       source = ./.dotfiles/.config;
       recursive = true;
     };
+    ".ideavimrc" = {
+      source = ./.dotfiles/home/.ideavimrc;
+      recursive = false;
+    };
   };
 
   home.sessionVariables = {

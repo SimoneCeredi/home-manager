@@ -48,7 +48,7 @@ nmap <Leader>sg :action ShowFind<CR>
 " Search for Git files in IntelliJ IDEA
 nmap <Leader>gf :action GotoAction<CR>
 " Search for files in project
-nmap <Leader>sf :action GotoFile<CR>
+nmap <C-p> :action GotoFile<CR>
 " Search recent files
 nmap <Leader>? :action RecentFiles<CR>
 " Search recently open buffers
