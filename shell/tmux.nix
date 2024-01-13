@@ -1,5 +1,4 @@
-{ config, lib, pkgs, ... }:
-{
+{ config, lib, pkgs, ... }: {
   programs.tmux = {
     enable = true;
     escapeTime = 0;
@@ -11,7 +10,7 @@
       set -sa terminal-overrides "*:Tc"
       set -g default-terminal "screen-256color"
       set -g status-style 'bg=#333333 fg=#5eacd3'
-      
+
       bind -T copy-mode-vi v send-keys -X begin-selection
       bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
 
@@ -30,7 +29,5 @@
       # bind-key -r i run-shell "tmux neww tmux-cht.sh"
     '';
   };
-  home.packages = with pkgs; [
-    tmux-sessionizer
-  ];
+  home.packages = with pkgs; [ tmux-sessionizer ];
 }

@@ -1,7 +1,1 @@
-{
-  imports = 
-  [
-    ./nvim
-    ./jetbrains.nix
-  ];
-}
+{ imports = [ ./nvim ./jetbrains.nix ]; }

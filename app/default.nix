@@ -1,7 +1,1 @@
-{
-  imports = 
-  [
-    ./git.nix
-    ./ide
-  ];
-}
+{ imports = [ ./git.nix ./ide ]; }

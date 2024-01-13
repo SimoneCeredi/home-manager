@@ -1,8 +1,1 @@
-{
-  imports = 
-  [
-    ./cli-collection.nix
-    ./sh.nix
-    ./tmux.nix
-  ];
-}
+{ imports = [ ./cli-collection.nix ./sh.nix ./tmux.nix ]; }

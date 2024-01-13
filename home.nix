@@ -4,6 +4,9 @@
   home.username = "simone";
   home.homeDirectory = "/home/simone";
 
+  # once obsidian updates electron this can be removed
+  nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
+
   imports = [
     ./app
     ./lang
@@ -17,14 +20,17 @@
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
-    fira-code fira-code-symbols
+    fira-code
+    fira-code-symbols
     terminus_font
     jetbrains-mono
     powerline-fonts
     gelasio
     nerdfonts
     iosevka
-    noto-fonts noto-fonts-cjk noto-fonts-emoji
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
     source-code-pro
     ttf_bitstream_vera
     terminus_font_ttf
@@ -36,6 +42,9 @@
     # postman
     # onedrive
     discord
+    qbittorrent
+    vlc
+    obsidian
   ];
 
   home.file = {
@@ -51,7 +60,7 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
-    NIXPKGS_ALLOW_UNFREE=1;
+    NIXPKGS_ALLOW_UNFREE = 1;
   };
 
   # Let Home Manager install and manage itself.

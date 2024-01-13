@@ -1,10 +1,5 @@
-{ config, pkgs, ... }:
-{
-  imports = [
-    ./cursor.nix
-    ./foot.nix
-  ];
+{ config, pkgs, ... }: {
+  imports = [ ./cursor.nix ./foot.nix ];
 
-  home.packages = with pkgs; [
-  ];
+  home.packages = with pkgs; [ ];
 }

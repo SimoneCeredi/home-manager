@@ -1,10 +1,8 @@
-{ config, pkgs, ... }:
-{
-  imports = 
-  [
+{ config, pkgs, ... }: {
+  imports = [
     # if some langs need a not trivial configuration
   ];
-  
+
   home.packages = with pkgs; [
     # nix
     nixpkgs-lint

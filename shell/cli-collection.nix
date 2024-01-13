@@ -4,12 +4,17 @@
   # Collection of useful CLI apps
   home.packages = with pkgs; [
     # Command Line
-    neofetch 
+    neofetch
     cava
-    gnugrep gnused
+    gnugrep
+    gnused
     killall
     libnotify
-    bat eza fd bottom ripgrep
+    bat
+    eza
+    fd
+    bottom
+    ripgrep
     rsync
     htop
     hwinfo
@@ -20,6 +25,7 @@
     fzf
     pandoc
     pciutils
-    vim vscode
+    vim
+    vscode
   ];
 }

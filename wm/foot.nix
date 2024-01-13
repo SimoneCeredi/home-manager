@@ -1,5 +1,4 @@
-{ config, lib, pkgs, ... }:
-{
+{ config, lib, pkgs, ... }: {
   programs.foot = {
     enable = true;
     settings = {
@@ -9,9 +8,7 @@
         font = "JetBrains Mono:size=16";
         dpi-aware = "yes";
       };
-      colors = {
-        alpha = 0.98;
-      };
+      colors = { alpha = 0.98; };
     };
   };
 }
