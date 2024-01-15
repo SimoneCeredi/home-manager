@@ -12,7 +12,7 @@
         outputs = [{
           criteria = "eDP-1";
           status = "enable";
-          mode = "2880x1800";
+          mode = "2880x1800@60.001Hz";
           position = "0,0";
           scale = 1.5;
         }];
@@ -22,7 +22,7 @@
           {
             criteria = "eDP-1";
             status = "enable";
-            mode = "2880x1800";
+            mode = "2880x1800@60.001Hz";
             position = "0,0";
             scale = 1.5;
           }

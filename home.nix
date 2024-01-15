@@ -4,9 +4,6 @@
   home.username = "simone";
   home.homeDirectory = "/home/simone";
 
-  # once obsidian updates electron this can be removed
-  nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
-
   imports = [
     ./app
     ./lang
@@ -44,7 +41,8 @@
     discord
     qbittorrent
     vlc
-    obsidian
+    # obsidian
+    # libsForQt5.okular
   ];
 
   home.file = {
