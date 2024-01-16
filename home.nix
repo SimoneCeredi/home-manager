@@ -50,6 +50,10 @@
       source = ./.dotfiles/.config;
       recursive = true;
     };
+    ".wallpapers" = {
+      source = ./.dotfiles/wallpapers;
+      recursive = true;
+    };
     ".ideavimrc" = {
       source = ./.dotfiles/home/.ideavimrc;
       recursive = false;
